@@ -56,7 +56,7 @@ export default function Layout({ children, home }) {
                     aria-expanded="false">Demos
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="demoMenu">
-                    <li>z<a className="dropdown-item" href="index.html">Home Default</a></li>
+                    <li> <a className="dropdown-item" href="index.html">Home Default</a></li>
                     <li> <a className="dropdown-item" href="index-2.html">Home Education</a></li>
                     <li> <a className="dropdown-item" href="index-3.html">Home Academy</a></li>
                     <li> <a className="dropdown-item" href="index-4.html">Home Course</a></li>
