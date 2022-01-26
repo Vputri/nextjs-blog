@@ -8,7 +8,7 @@ const Card = ({ article }) => {
           <div className="overflow-hidden rounded-3">
             <img
               className="card-img"
-              src={imageUrl}
+              src="/assets/images/event/02.jpg"
               alt={imageUrl}
             />
             <div className="bg-overlay bg-dark opacity-4"></div>
@@ -31,6 +31,8 @@ const Card = ({ article }) => {
           </div>
         </div>
       </div>
+
+      
   );
 };
 

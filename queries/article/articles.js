@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 const ARTICLES_QUERY = gql`
-  query Articles{
-    articles{
+  query Articles($after: String, $name : String){
+    articles(first: 3, after: $after, name: $name){
       pageInfo {
         startCursor
         hasNextPage

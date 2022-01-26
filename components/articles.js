@@ -7,8 +7,9 @@ const Articles = ({ articles }) => {
   });
 
   return (
-    <div className="row g-4 filter-container overflow-hidden" data-isotope='{"layoutMode": "masonry"}'>
-      {displayArticle}
+    <div className="row g-4 filter-container overflow-hidden"
+    	data-isotope='{"layoutMode": "masonry"}'>
+    	{displayArticle}
     </div>
   );
 };
