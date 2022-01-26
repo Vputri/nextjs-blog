@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
-import { getSortedPostsData } from '../lib/posts'
+import Articles from "../components/articles";
+import Query from "../components/query";
+import ARTICLES_QUERY from "../queries/article/articles";
 
-export default function Home({ allPostsData }) {
+const Home = () => {
   return (
     <Layout home>
       <Head>
@@ -37,40 +39,13 @@ export default function Home({ allPostsData }) {
           </div>
         </div>
       </section>
-
       <section className="position-relative pt-0">
         <div className="container">
-          <div className="row g-4 filter-container overflow-hidden" data-isotope='{"layoutMode": "masonry"}'>
-
-          {allPostsData.map(({ id, date, title }) => (
-            <div className="col-sm-6 col-lg-4 grid-item">
-              <div className="card">
-                <div className="overflow-hidden rounded-3">
-                  <img src="/assets/images/event/02.jpg" className="card-img" alt="course image"/>
-
-                  <div className="bg-overlay bg-dark opacity-4"></div>
-                  <div className="card-img-overlay d-flex align-items-start p-3">
-
-                    <a href="#" className="badge bg-danger text-white">{id}</a>
-                  </div>
-                </div>
-
-
-                <div className="card-body px-3">
-
-                  <h5 className="card-title"><a href="#">{title}</a></h5>
-                  <p className="text-truncate-2">Affronting imprudence do he he everything. Offered chiefly farther of my no colonel shyness. Such on help ye some door if in. Laughter proposal laughing any son law consider. Needed except up piqued an.  </p>
-
-                  <div className="d-flex justify-content-between">
-                    <h6 className="mb-0"><a href="#">Frances Guerrero</a></h6>
-                    <span className="small">{date}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-
-          </div>
+          <Query query={ARTICLES_QUERY}>
+            {({ data: { articles } }) => {
+              return <Articles articles={articles} />
+            }}
+          </Query>
 
           <div className="text-center mt-4">
             <a href="#" className="btn btn-primary-soft mb-0">Load more<i className="fas fa-sync ms-2"></i></a>
@@ -79,14 +54,7 @@ export default function Home({ allPostsData }) {
         </div>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
-}
+export default Home;

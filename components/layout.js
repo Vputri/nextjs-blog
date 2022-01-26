@@ -1,21 +1,6 @@
-import Head from 'next/head'
-
 export default function Layout({ children, home }) {
   return (
     <div>
-      <Head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"/>
-        
-        <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css"/>
-        <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css"/>
-        <link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css"/>
-      </Head>
-
       <header className="navbar-light navbar-sticky">
         <nav className="navbar navbar-expand-xl">
           <div className="container">
@@ -56,19 +41,19 @@ export default function Layout({ children, home }) {
                     aria-expanded="false">Demos
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="demoMenu">
-                    <li> <a className="dropdown-item" href="index.html">Home Default</a></li>
-                    <li> <a className="dropdown-item" href="index-2.html">Home Education</a></li>
-                    <li> <a className="dropdown-item" href="index-3.html">Home Academy</a></li>
-                    <li> <a className="dropdown-item" href="index-4.html">Home Course</a></li>
-                    <li> <a className="dropdown-item" href="index-5.html">Home University</a></li>
-                    <li> <a className="dropdown-item" href="index-6.html">Home Kindergarten</a></li>
-                    <li> <a className="dropdown-item" href="index-7.html">Home Landing</a></li>
-                    <li> <a className="dropdown-item" href="index-8.html">Home Tutor</a></li>
+                    <li> <a className="dropdown-item" href="/">Home Default</a></li>
+                    <li> <a className="dropdown-item" href="/">Home Education</a></li>
+                    <li> <a className="dropdown-item" href="/">Home Academy</a></li>
+                    <li> <a className="dropdown-item" href="/">Home Course</a></li>
+                    <li> <a className="dropdown-item" href="/l">Home University</a></li>
+                    <li> <a className="dropdown-item" href="/">Home Kindergarten</a></li>
+                    <li> <a className="dropdown-item" href="/">Home Landing</a></li>
+                    <li> <a className="dropdown-item" href="/">Home Tutor</a></li>
                     <li> <hr className="dropdown-divider"/></li>
-                    <li> <a className="dropdown-item" href="request-demo.html">Request a demo</a></li>
-                    <li> <a className="dropdown-item" href="book-className.html">Book a Class</a></li>
-                    <li> <a className="dropdown-item" href="request-access.html">Free Access</a></li>
-                    <li> <a className="dropdown-item" href="university-admission-form.html">Admission Form</a></li>
+                    <li> <a className="dropdown-item" href="/request-demo">Request a demo</a></li>
+                    <li> <a className="dropdown-item" href="/book-className">Book a Class</a></li>
+                    <li> <a className="dropdown-item" href="/request-access">Free Access</a></li>
+                    <li> <a className="dropdown-item" href="/university-admission-form">Admission Form</a></li>
 
                     <li> <hr className="dropdown-divider"/></li>
                     <li className="dropdown-submenu dropend">
@@ -104,16 +89,16 @@ export default function Layout({ children, home }) {
                     <li className="dropdown-submenu dropend">
                       <a className="dropdown-item dropdown-toggle" href="#">Course</a>
                       <ul className="dropdown-menu dropdown-menu-start" data-bs-popper="none">
-                        <li> <a className="dropdown-item" href="course-grid.html">Course Grid Classic</a></li>
-                        <li> <a className="dropdown-item" href="course-grid-2.html">Course Grid Minimal</a></li>
+                        <li> <a className="dropdown-item" href="course-grid">Course Grid Classic</a></li>
+                        <li> <a className="dropdown-item" href="course-grid-2">Course Grid Minimal</a></li>
                         <li> <hr className="dropdown-divider"/></li>
-                        <li> <a className="dropdown-item" href="course-list.html">Course List Classic</a></li>
-                        <li> <a className="dropdown-item" href="course-list-2.html">Course List Minimal</a></li>
+                        <li> <a className="dropdown-item" href="course-list">Course List Classic</a></li>
+                        <li> <a className="dropdown-item" href="course-list">Course List Minimal</a></li>
                         <li> <hr className="dropdown-divider"/></li>
-                        <li> <a className="dropdown-item" href="course-detail.html">Course Detail Classic</a></li>
-                        <li> <a className="dropdown-item" href="course-detail-min.html">Course Detail Minimal</a></li>
-                        <li> <a className="dropdown-item" href="course-detail-adv.html">Course Detail Advance</a></li>
-                        <li> <a className="dropdown-item" href="course-video-player.html">Course Full Screen Video</a></li>
+                        <li> <a className="dropdown-item" href="course-detail">Course Detail Classic</a></li>
+                        <li> <a className="dropdown-item" href="course-detail">Course Detail Minimal</a></li>
+                        <li> <a className="dropdown-item" href="course-detail">Course Detail Advance</a></li>
+                        <li> <a className="dropdown-item" href="course-video-player">Course Full Screen Video</a></li>
                       </ul>
                     </li>
 
@@ -403,15 +388,6 @@ export default function Layout({ children, home }) {
           </div>
         </div>
       </footer>
-
-      <div className="back-top"><i className="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
-
-      <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-      <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
-      <script src="assets/vendor/imagesLoaded/imagesloaded.js"></script>
-
-      <script src="assets/js/functions.js"></script>
     </div>
   )
 }
