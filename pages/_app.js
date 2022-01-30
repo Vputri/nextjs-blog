@@ -1,4 +1,4 @@
-import '../public/assets/css/style.css'
+
 import Head from "next/head";   
 import { ApolloProvider } from "@apollo/react-hooks";  
 import withData from "../utils/apollo";
@@ -18,6 +18,7 @@ const App = ({ Component, pageProps, apollo }) => {
         <link rel="stylesheet" type="text/css" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"/>
         <link rel="stylesheet" type="text/css" href="/assets/vendor/glightbox/css/glightbox.css"/>
 
+        <link id="style-switch" rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
     		<script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     		<script src="/assets/vendor/isotope/isotope.pkgd.min.js"></script>

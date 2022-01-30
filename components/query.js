@@ -5,13 +5,13 @@ const Query = ({ children, query }) => {
 
   if (loading) return (
   	<div className="mx-3 px-5">
-  		<p className="mx-4 px-5">Loading</p>;
+  		<p className="mx-4 px-5">Loading</p>
   	</div>
   )
 
   if (error) return (
   	<div className="mx-3 px-5">
-  		<p className="mx-4 px-5">Artikel tidak tersedia</p>;
+  		<p className="mx-4 px-5">Artikel tidak tersedia</p>
   	</div>
   )
 
